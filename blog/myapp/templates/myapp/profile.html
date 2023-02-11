@@ -1,0 +1,11 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'myapp/messages.html' %}
+<div class="container user-box" style="background-color: antiquewhite; text-align: center;">
+    <div > <img src="{% static 'myapp/user.png' %}" class="user-image"></div>
+    <h3>Username : {{user}}</h3><br>
+    <button type="button" class="btn btn-dark">My Blogs</button>
+</div>
+{% endblock %}

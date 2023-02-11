@@ -1,0 +1,32 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row">   
+        <div class="col-8">    
+        <div class="Text-heading">Recent Blogs</div>
+        {% for blog in blogs %} 
+                <div class="Recent-blogs">
+                    <div class="blog-body">
+                        <h2>{{ blog.title }}</h2>
+                        <h4>{{ blog.author }}</h4>
+                        <h5>{{ blog.date_posted }}</h5>
+                    </div>
+                </div>
+        {% endfor %}  
+        </div> 
+        <div class="col-4 Top ">    
+        <div class="Text-heading">Top</div>
+        {% for blog in blogs %}   
+            <div class="Recent-blogs">
+                <div class="blog-body">
+                    <h2>{{ blog.title }}</h2>
+                    <h4>{{ blog.author }}</h4>
+                    <h5>{{ blog.date_posted }}</h5>
+                </div>
+            </div>    
+        {% endfor %}  
+    </div>    
+    </div>    
+</div>
+{% endblock %}

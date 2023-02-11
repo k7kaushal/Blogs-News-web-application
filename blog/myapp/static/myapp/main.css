@@ -1,0 +1,54 @@
+
+.Nav{
+    background-color: rgb(53, 49, 49);
+    padding: 20px;
+}
+.Nav-link{
+    margin: 5px;
+    color: antiquewhite;
+}
+.Nav-link:hover{
+    background-color: antiquewhite;
+    border-radius: 5px;
+    color: rgb(53, 49, 49);
+}
+.dropdown-toggle{
+    color: antiquewhite;
+}
+.dropdown-menu{
+    background-color: rgb(53, 49, 49);
+}
+.dropdown-item{
+    color: antiquewhite;
+}
+.Text-heading{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: antiquewhite;
+    font-size: 70px;
+}
+.Recent-blogs{
+    margin-top: 50px !important;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid gray;
+}
+.Top{
+    border-left: 2px solid gray;
+}
+.Messages{
+    /* margin: 20px; */
+    background-color: aquamarine !important;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+.user-image{
+    height: 150px;
+    width: 230px;
+    margin-bottom: 60px;
+}
+.user-box{
+    border-radius: 20px;
+    padding: 30px;
+}
