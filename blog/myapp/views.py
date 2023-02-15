@@ -162,7 +162,6 @@ def register(request):
     if request.method == 'POST':
 
         err_lst = []
-
         username = request.POST.get('username')
         email = request.POST.get('email')
         password1 = request.POST.get('password1')
@@ -218,6 +217,28 @@ def register(request):
 #         else:
 #             return render(request, 'myapp/home.html', {'message': "Invalid Credentials!"})
 #     return render(request, 'myapp/login.html')    
+
+def login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')    
+        password = request.POST.get('password')
+        users = User.objects.filter(username = username).first()
+        if users is not None:
+            username = users.username
+            user =  authenticate(request, username=username, password=password)
+            if user is not None:
+                print("user is not none true")
+                login_User(request, user)
+                return redirect('blog-home')
+            else:
+                print("error message wala")
+                messages.success(request, f'Invalid Credentials!')
+                return render(request, 'myapp/login.html')
+        else:
+            messages.success(request, f'Invalid Credentials!')
+            return render(request, 'myapp/login.html')
+    else:
+        return render(request, 'myapp/login.html')
 
 def logout(request):
     logout_User(request)
