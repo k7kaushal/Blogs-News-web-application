@@ -3,9 +3,14 @@
 
 {% block content %}
 {% include 'myapp/messages.html' %}
-<div class="container user-box" style="background-color: antiquewhite; text-align: center;">
-    <div > <img src="{% static 'myapp/user.png' %}" class="user-image"></div>
-    <h3>Username : {{user}}</h3><br>
-    <button type="button" class="btn btn-dark">My Blogs</button>
+<br><br><div class="container user-box" style="background-color: antiquewhite;">
+    <div class="row container"> 
+        <div class="col-12 col-md-4" style="text-align: center;"><img src="{% static 'myapp/user.png' %}" class="user-image"></div>
+    <div class="col-12 col-md-8">
+        <h4>Username : {{user}}</h3><br>
+        <h4>Email : {{user.email}}</h3><br>
+        <h4>Blogs posted : {{ blogs }}</h3><br>
+        <a href="{% url 'blog-blogs' %}"><button type="button" class="btn btn-dark">My Blogs &nbsp;<i class="fa-solid fa-plus"></i></button></a>
+    </div></div>
 </div>
 {% endblock %}

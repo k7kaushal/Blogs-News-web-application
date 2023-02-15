@@ -1,0 +1,24 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block content %}
+{% include 'myapp/messages.html' %}
+<div class="container">
+    <div class="content-section">
+        <form action="" method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+            <div class="Text-heading">Edit your Blog</div>             
+            <div class="mb-3">
+                <label class="form-label">Title</label>
+                <input type="text" class="form-control" name="title" value="{{ blog.title }}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Content</label>
+                <input type="text" class="form-control" name="content" value="{{ blog.content }}">
+            </div>
+            </fieldset>
+              <button type="submit" class="btn btn-primary">Update Blog</button>
+            </form>
+    </div>   
+</div>
+{% endblock %}

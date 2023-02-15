@@ -1,0 +1,22 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block content %}
+{% include 'myapp/messages.html' %}
+<div class="container">
+        <div class=""><br><br>
+            <div class="blog-body">
+                <h2>{{ blog.title }} </h2>
+                <large>{{ blog.author }}</large><br>
+                <small>{{ blog.date_posted }} &nbsp; &nbsp;</small>
+                {% if user == blog.author %}
+                <a href="{% url 'editblog' blog.slug  %}"><button type="button" class="btn btn-dark"><i class="fa-solid fa-pen-to-square"></i>&nbsp; Edit</button></a>
+                <a href="{% url 'delete' blog.id %}"><button type="button" class="btn btn-dark"><i class="fa-solid fa-trash"></i>&nbsp; Delete</button></a>
+                {% endif %}
+            </div>
+        </div><br><br>
+        <div class="">
+            <p>{{ blog.content }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

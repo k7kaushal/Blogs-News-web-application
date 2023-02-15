@@ -1,13 +1,225 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>This is about</h1>
-    
-</body>
-</html>
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block content %}
+{% include 'myapp/messages.html' %}
+<style>
+
+.blue-bg {
+  color: rgb(53, 49, 49);
+  height: 100%;
+}
+
+.circle {
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 50%;
+  background-color:antiquewhite;
+  color: #4D4545;
+  max-height: 50px;
+  z-index: 2;
+}
+
+.how-it-works.row {
+  display: flex;
+}
+.how-it-works.row .col-2 {
+  display: inline-flex;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+}
+.how-it-works.row .col-2.bottom::after {
+  height: 50%;
+  left: 50%;
+  top: 50%;
+}
+.how-it-works.row .col-2.full::after {
+  height: 100%;
+  left: calc(50% - 3px);
+}
+.how-it-works.row .col-2.top::after {
+  height: 50%;
+  left: 50%;
+  top: 0;
+}
+
+.timeline div {
+  padding: 0;
+  height: 40px;
+}
+.timeline hr {
+  border-top: 3px solid antiquewhite;
+  margin: 0;
+  top: 17px;
+  position: relative;
+}
+.timeline .col-2 {
+  display: flex;
+  overflow: hidden;
+}
+.timeline .corner {
+  border: 3px solid antiquewhite;
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+}
+.timeline .top-right {
+  left: 50%;
+  top: -50%;
+}
+.timeline .left-bottom {
+  left: -50%;
+  top: calc(50% - 3px);
+}
+.timeline .top-left {
+  left: -50%;
+  top: -50%;
+}
+.timeline .right-bottom {
+  left: 50%;
+  top: calc(50% - 3px);
+}
+
+</style>
+    <div class="Text-heading">About Me</div>
+    <div class="container">
+        <div class="Recent-blogs" style="text-align: left; padding: 20px;">
+            <div class="row">
+                <div class="col-md-2 col-12" >
+                    <div class="" style="border-radius: 50%;">
+                        <img src="https://media.licdn.com/dms/image/C4D03AQHnFMTzMGqdJA/profile-displayphoto-shrink_400_400/0/1667926236217?e=1681948800&v=beta&t=R98H93OTL_UUFLFnuWK6FAoK9vXjwFGZ7SmhCkGpREM" class="card-img-top" style="border-radius: 50% !important;" alt="...">
+                        <div class="card-body" style="text-align: center;">
+                            <br>
+                            <div class="padding-left: 20px;">
+                                    <a href="https://www.linkedin.com/in/kaushal-kulkarni-461a03212" class="me-4 text-reset">
+                                        <button class="btn btn-dark"><i class="fab fa-linkedin"></i></button>
+                                    </a>
+                                <span>
+                                    <a href="https://github.com/k7kaushal" class="me-4 text-reset"><button class="btn btn-dark"><i class="fab fa-github"></i>
+                                    </button>
+                                    </a>
+                                </span>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 col-12">
+                    <br><p>I'm a third year engineering student at Pune Institute of Computer Technology. I've worked with technologies like Django, Reactjs, and Tensorflow, and I have a strong interest in competitive programming and problem-solving.I am currently working as a freelance problem curator at iMocha. I have experience working as a computer vision intern at Vasundhara Geo Technologies and am passionate about machine learning. I encountered numerous applications for my combined talents in machine learning and web development during my internship stay. As someone who is interested in technological developments, I always familiarise myself with new ones to investigate potential applications in the future.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid blue-bg">
+        <div class="container"><br>
+          <h2 class="Text-heading">Experience</h2><br>
+          <!--first section-->
+          <div class="row align-items-center how-it-works">
+            <div class="col-2 text-center bottom">
+              <div class="circle">1</div>
+            </div>
+            <div class="col-6">
+              <h5>Junior Developer : TEDxPICT</h5>
+              <p>Worked as a Junior developer to create a REACT based website official for TEDxPICT.</p>
+            </div>
+          </div>
+          <!--path between 1-2-->
+          <div class="row timeline">
+            <div class="col-2">
+              <div class="corner top-right"></div>
+            </div>
+            <div class="col-8">
+              <hr/>
+            </div>
+            <div class="col-2">
+              <div class="corner left-bottom"></div>
+            </div>
+          </div>
+          <!--second section-->
+          <div class="row align-items-center justify-content-end how-it-works">
+            <div class="col-6 text-right">
+              <h5>BeEcoFriendly 
+            </h5>
+              <p>Developed a portal to promote local Tree Plantation drives. Some key features of the portal
+                included, live count of trees planted in the drive, display of ongoing drives, photos of the drive, etc. This project also
+                won Developer Hacks – 21: Google Developer Student Clubs among 50+ teams.</p>
+            </div>
+            <div class="col-2 text-center full">
+              <div class="circle">2</div>
+            </div>
+          </div>
+          <!--path between 2-3-->
+          <div class="row timeline">
+            <div class="col-2">
+              <div class="corner right-bottom"></div>
+            </div>
+            <div class="col-8">
+              <hr/>
+            </div>
+            <div class="col-2">
+              <div class="corner top-left"></div>
+            </div>
+          </div>
+          <!--third section-->
+          <div class="row align-items-center how-it-works">
+            <div class="col-2 text-center top">
+              <div class="circle">3</div>
+            </div>
+            <div class="col-6">
+              <h5>Indian sign language detection tool</h5>
+              <p>Built a ML based project aiming to convert Indian sign language into
+                textto help conversation with deaf and hard of hearing people. Libraries used : OpenCV, Mediapipe (Holistic),
+                Numpy,Keras.</p>
+            </div>
+          </div>
+          <!--path between 1-2-->
+          <div class="row timeline">
+            <div class="col-2">
+              <div class="corner top-right"></div>
+            </div>
+            <div class="col-8">
+              <hr/>
+            </div>
+            <div class="col-2">
+              <div class="corner left-bottom"></div>
+            </div>
+          </div>
+          <!--second section-->
+          <div class="row align-items-center justify-content-end how-it-works">
+            <div class="col-6 text-right">
+              <h5>Vasundharaa Geo Technologies
+            </h5>
+              <p>Worked as a Computer vision intern on a classification model based on deep learning algorithms for Indian Navy.
+                Successfully completed and presented a working demo which helped the company complete sprints and 
+                pull the main project by a month.</p>
+            </div>
+            <div class="col-2 text-center full">
+              <div class="circle">2</div>
+            </div>
+          </div>
+          <!--path between 2-3-->
+          <div class="row timeline">
+            <div class="col-2">
+              <div class="corner right-bottom"></div>
+            </div>
+            <div class="col-8">
+              <hr/>
+            </div>
+            <div class="col-2">
+              <div class="corner top-left"></div>
+            </div>
+          </div>
+          <!--third section-->
+          <div class="row align-items-center how-it-works">
+            <div class="col-2 text-center top">
+              <div class="circle">3</div>
+            </div>
+            <div class="col-6">
+              <h5>iMocha</h5>
+              <p>Working as a freelance problem curator to design coding questions on various concepts based on Data Structures and 
+                Algorithms</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+{% endblock %}

@@ -1,3 +1,6 @@
+body::-webkit-scrollbar-thumb {
+    background: #000 !important;
+}
 
 .Nav{
     background-color: rgb(53, 49, 49);
@@ -22,6 +25,7 @@
     color: antiquewhite;
 }
 .Text-heading{
+    text-align: center !important;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: antiquewhite;
     font-size: 70px;
@@ -29,7 +33,6 @@
 .Recent-blogs{
     margin-top: 50px !important;
     border-radius: 20px;
-    text-align: center;
     border: 2px solid gray;
 }
 .Top{
@@ -37,7 +40,7 @@
 }
 .Messages{
     /* margin: 20px; */
-    background-color: aquamarine !important;
+    background-color: antiquewhite !important;
     padding: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
@@ -51,4 +54,7 @@
 .user-box{
     border-radius: 20px;
     padding: 30px;
+}
+.my-btn{
+    background-color: blanchedalmond;
 }
