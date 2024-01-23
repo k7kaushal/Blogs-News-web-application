@@ -1,4 +1,5 @@
-Setup
+# Setup
+
 The first thing to do is to clone the repository:
 `https://github.com/k7kaushal/Blogs-News-web-application.git`
 
